@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Michael Dickens | IT Data Analytics Portfolio</title>
+  <style>
+    :root {
+      --bg: #0f172a;
+      --panel: #111827;
+      --card: #1f2937;
+      --text: #e5e7eb;
+      --muted: #94a3b8;
+      --accent: #38bdf8;
+      --accent-2: #22c55e;
+      --border: rgba(255,255,255,0.08);
+    }
+
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+      background: linear-gradient(180deg, #0f172a 0%, #111827 100%);
+      color: var(--text);
+      line-height: 1.6;
+    }
+
+    a {
+      color: var(--accent);
+      text-decoration: none;
+    }
+
+    a:hover { text-decoration: underline; }
+
+    .container {
+      width: min(1100px, 92%);
+      margin: 0 auto;
+    }
+
+    nav {
+      position: sticky;
+      top: 0;
+      backdrop-filter: blur(10px);
+      background: rgba(15, 23, 42, 0.9);
+      border-bottom: 1px solid var(--border);
+      z-index: 10;
+    }
+
+    .nav-inner {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 16px 0;
+    }
+
+    .brand {
+      font-weight: 700;
+      letter-spacing: 0.4px;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+
+    header {
+      padding: 72px 0 48px;
+    }
+
+    .hero {
+      display: grid;
+      grid-template-columns: 1.4fr 1fr;
+      gap: 28px;
+      align-items: center;
+    }
+
+    .hero-card, .card {
+      background: rgba(31, 41, 55, 0.72);
+      border: 1px solid var(--border);
+      border-radius: 18px;
+      padding: 28px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.25);
+    }
+
+    h1, h2, h3 { margin-top: 0; }
+    h1 {
+      font-size: clamp(2rem, 4vw, 3.2rem);
+      line-height: 1.1;
+      margin-bottom: 14px;
+    }
+
+    .subtitle {
+      font-size: 1.05rem;
+      color: var(--muted);
+      max-width: 62ch;
+    }
+
+    .tag-row {
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+      margin: 20px 0 24px;
+    }
+
+    .tag {
+      background: rgba(56, 189, 248, 0.12);
+      color: #bae6fd;
+      border: 1px solid rgba(56, 189, 248, 0.3);
+      padding: 8px 12px;
+      border-radius: 999px;
+      font-size: 0.92rem;
+    }
+
+    .btn-row {
+      display: flex;
+      gap: 14px;
+      flex-wrap: wrap;
+      margin-top: 8px;
+    }
+
+    .btn {
+      display: inline-block;
+      padding: 12px 18px;
+      border-radius: 10px;
+      font-weight: 700;
+      border: 1px solid transparent;
+    }
+
+    .btn-primary {
+      background: var(--accent);
+      color: #082f49;
+    }
+
+    .btn-secondary {
+      background: transparent;
+      color: var(--text);
+      border-color: var(--border);
+    }
+
+    section {
+      padding: 22px 0 18px;
+    }
+
+    .section-title {
+      font-size: 1.8rem;
+      margin-bottom: 8px;
+    }
+
+    .section-intro {
+      color: var(--muted);
+      margin-bottom: 24px;
+    }
+
+    .grid-2 {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 22px;
+    }
+
+    .skills-list, .project-list {
+      margin: 0;
+      padding-left: 20px;
+    }
+
+    .skills-list li, .project-list li {
+      margin-bottom: 8px;
+    }
+
+    .project-card {
+      background: rgba(31, 41, 55, 0.72);
+      border: 1px solid var(--border);
+      border-radius: 18px;
+      padding: 24px;
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+    }
+
+    .project-meta {
+      color: var(--muted);
+      font-size: 0.95rem;
+    }
+
+    .stack {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+
+    .stack span {
+      font-size: 0.85rem;
+      background: rgba(34, 197, 94, 0.12);
+      color: #bbf7d0;
+      border: 1px solid rgba(34, 197, 94, 0.25);
+      padding: 6px 10px;
+      border-radius: 999px;
+    }
+
+    footer {
+      padding: 34px 0 56px;
+      color: var(--muted);
+      text-align: center;
+    }
+
+    @media (max-width: 860px) {
+      .hero, .grid-2 {
+        grid-template-columns: 1fr;
+      }
+
+      .nav-inner {
+        flex-direction: column;
+        gap: 12px;
+        align-items: flex-start;
+      }
+    }
+  </style>
+</head>
+<body>
+  <nav>
+    <div class="container nav-inner">
+      <div class="brand">Michael Dickens</div>
+      <div class="nav-links">
+        <a href="#about">About</a>
+        <a href="#projects">Projects</a>
+        <a href="#resume">Resume</a>
+        <a href="#contact">Contact</a>
+      </div>
+    </div>
+  </nav>
+
+  <header>
+    <div class="container hero">
+      <div class="hero-card">
+        <p style="color:#7dd3fc; font-weight:700; margin-bottom:8px;">IT Data Analytics Portfolio</p>
+        <h1>Building dashboards, databases, and data workflows that turn raw data into useful insight.</h1>
+        <p class="subtitle">
+          I am an IT Data Analytics student at Nova Scotia Community College with hands-on experience in SQL, Power BI, SSIS, Python, and reporting projects using real Canadian datasets.
+        </p>
+        <div class="tag-row">
+          <span class="tag">SQL</span>
+          <span class="tag">Power BI</span>
+          <span class="tag">SSIS</span>
+          <span class="tag">Python</span>
+          <span class="tag">SSRS</span>
+        </div>
+        <div class="btn-row">
+          <a class="btn btn-primary" href="#projects">View Projects</a>
+          <a class="btn btn-secondary" href="#resume">View Resume</a>
+        </div>
+      </div>
+
+      <div class="card">
+        <h3 style="margin-bottom:10px;">What I’m seeking</h3>
+        <p style="margin-top:0; color: var(--muted);">
+          Entry-level opportunities in data analytics, business intelligence, database development, or reporting where I can apply technical skills to real-world business problems.
+        </p>
+        <h3 style="margin-bottom:10px; margin-top:24px;">Core strengths</h3>
+        <ul class="skills-list">
+          <li>ETL workflow design with SSIS</li>
+          <li>Dashboard development with Power BI and SSRS</li>
+          <li>Relational database design with SQL</li>
+          <li>Clear technical documentation and reporting</li>
+        </ul>
+      </div>
+    </div>
+  </header>
+
+  <main class="container">
+    <section id="about">
+      <h2 class="section-title">About Me</h2>
+      <p class="section-intro">
+        I enjoy building structured data solutions that make information easier to understand and use. My work focuses on combining technical tools with clear communication so that data can support better decisions.
+      </p>
+      <div class="grid-2">
+        <div class="card">
+          <h3>Technical Skills</h3>
+          <ul class="skills-list">
+            <li><strong>Databases & Querying:</strong> SQL, MySQL, PostgreSQL</li>
+            <li><strong>Business Intelligence:</strong> Power BI, SSRS, Excel dashboards</li>
+            <li><strong>Data Engineering:</strong> SSIS, Visual Studio</li>
+            <li><strong>Programming:</strong> Python (Pandas, NumPy, Matplotlib)</li>
+            <li><strong>Documentation & Design:</strong> Draw.io, Word, PowerPoint</li>
+          </ul>
+        </div>
+        <div class="card" id="resume">
+          <h3>Resume</h3>
+          <p style="color: var(--muted);">
+            Add your final resume PDF here once uploaded to your GitHub Pages repository.
+          </p>
+          <p><a href="resume.pdf" target="_blank">Download Resume PDF</a></p>
+          <p style="font-size:0.92rem; color: var(--muted); margin-top:16px;">
+            Replace <code>resume.pdf</code> with the exact filename of your final resume.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section id="projects">
+      <h2 class="section-title">Featured Projects</h2>
+      <p class="section-intro">
+        These projects highlight my experience with ETL processes, dashboards, relational database design, and technical reporting.
+      </p>
+
+      <div class="grid-2">
+        <article class="project-card">
+          <div>
+            <h3>Stats Canada Unemployment ETL & Dashboard Solution</h3>
+            <p class="project-meta">ETL • SQL • Reporting • Business Intelligence</p>
+          </div>
+          <p>
+            Built an end-to-end analytics solution using SSIS, SQL, Power BI, and Draw.io to transform unemployment data into a structured reporting workflow.
+          </p>
+          <div class="stack">
+            <span>SSIS</span>
+            <span>SQL</span>
+            <span>Power BI</span>
+            <span>Visual Studio</span>
+            <span>Draw.io</span>
+          </div>
+          <ul class="project-list">
+            <li>Imported and transformed unemployment datasets with SSIS.</li>
+            <li>Designed structured tables and data flow diagrams.</li>
+            <li>Created dashboards for regional unemployment analysis.</li>
+          </ul>
+          <p><a href="statscan.html">View full project page →</a></p>
+        </article>
+
+        <article class="project-card">
+          <div>
+            <h3>Hockey Registration Relational Database System</h3>
+            <p class="project-meta">Database Design • SQL • Documentation</p>
+          </div>
+          <p>
+            Designed a relational database system to organize player registration data using SQL, Microsoft Access, Excel, and project documentation.
+          </p>
+          <div class="stack">
+            <span>SQL</span>
+            <span>Access</span>
+            <span>Excel</span>
+            <span>Word</span>
+            <span>PowerPoint</span>
+          </div>
+          <ul class="project-list">
+            <li>Built normalized tables and relationships.</li>
+            <li>Validated and organized registration data.</li>
+            <li>Produced technical documentation and presentation materials.</li>
+          </ul>
+          <p><a href="hockey.html">View full project page →</a></p>
+        </article>
+      </div>
+    </section>
+
+    <section id="contact">
+      <h2 class="section-title">Contact</h2>
+      <div class="card">
+        <p><strong>Email:</strong> <a href="mailto:michaeldickens1@icloud.com">michaeldickens1@icloud.com</a></p>
+        <p><strong>GitHub:</strong> <a href="https://github.com/DMichael17" target="_blank">github.com/DMichael17</a></p>
+        <p><strong>LinkedIn:</strong> <a href="https://linkedin.com/in/michael-dickens-32211a327/" target="_blank">linkedin.com/in/michael-dickens-32211a327/</a></p>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">
+      <p>© 2026 Michael Dickens | IT Data Analytics Portfolio</p>
+    </div>
+  </footer>
+</body>
+</html>
