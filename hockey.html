@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Hockey Registration Database | Michael Dickens</title>
+
+<style>
+:root{
+--bg:#0f172a;
+--panel:#111827;
+--card:#1f2937;
+--text:#e5e7eb;
+--muted:#94a3b8;
+--accent:#38bdf8;
+--border:rgba(255,255,255,0.08);
+}
+
+body{
+margin:0;
+font-family:Arial;
+background:linear-gradient(180deg,#0f172a,#111827);
+color:var(--text);
+line-height:1.6;
+}
+
+.container{
+width:min(1000px,92%);
+margin:auto;
+}
+
+nav{
+background:rgba(15,23,42,0.95);
+padding:18px;
+border-bottom:1px solid var(--border);
+}
+
+a{color:var(--accent);text-decoration:none;}
+
+.card{
+background:rgba(31,41,55,0.8);
+padding:28px;
+border-radius:18px;
+border:1px solid var(--border);
+margin-bottom:24px;
+}
+
+h1{font-size:40px;margin-top:0;}
+
+.pill{
+background:rgba(56,189,248,0.15);
+padding:8px 12px;
+border-radius:20px;
+margin-right:8px;
+display:inline-block;
+margin-top:10px;
+}
+
+img{
+width:100%;
+border-radius:14px;
+margin-top:15px;
+border:1px solid var(--border);
+}
+</style>
+
+</head>
+
+<body>
+
+<nav>
+<a href="index.html">← Back to Portfolio</a>
+</nav>
+
+<div class="container">
+
+<div class="card">
+<h1>Hockey Registration Relational Database System</h1>
+
+<p>
+This project involved designing and implementing a relational database system to manage hockey league registrations.
+The goal was to organize player, team, season, and league data into a structured database that reduces redundancy and
+improves data integrity.
+</p>
+
+<div>
+<span class="pill">SQL</span>
+<span class="pill">Database Design</span>
+<span class="pill">Normalization</span>
+<span class="pill">Microsoft Access</span>
+<span class="pill">Excel</span>
+</div>
+
+</div>
+
+<div class="card">
+<h2>Problem</h2>
+<p>
+Manual tracking of player registrations and team assignments can lead to inconsistent records and duplicated data.
+The objective of this project was to design a normalized database that allows efficient storage, retrieval, and updating
+of hockey league registration information.
+</p>
+</div>
+
+<div class="card">
+<h2>My Role</h2>
+<ul>
+<li>Designed relational tables for players, teams, leagues, seasons, and registrations</li>
+<li>Created primary and foreign key relationships</li>
+<li>Applied normalization principles to reduce redundancy</li>
+<li>Validated and organized data using Excel</li>
+<li>Produced documentation and system presentation materials</li>
+</ul>
+</div>
+
+<div class="card">
+<h2>Implementation</h2>
+<p>
+The database was structured using a central registration table connected to lookup tables such as player, team,
+league, and season. This design allows flexible tracking of player participation across seasons and teams while
+maintaining data consistency.
+</p>
+</div>
+
+<div class="card">
+<h2>Results</h2>
+<ul>
+<li>Improved organization of registration data</li>
+<li>Reduced manual tracking complexity</li>
+<li>Demonstrated understanding of relational database design</li>
+<li>Showed ability to document and present technical systems</li>
+</ul>
+</div>
+
+<div class="card">
+<h2>Database ERD</h2>
+
+<img src="ERD Diagram .png">
+
+<p style="color:var(--muted);">
+Entity relationship diagram showing the normalized database structure used for the hockey registration system.
+</p>
+
+</div>
+
+</div>
+
+</body>
+</html>
