@@ -1,90 +1,346 @@
-<section class="project-section">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Premier League Predictive Model | Michael Dickens</title>
+  <style>
+    :root {
+      --bg: #0f172a;
+      --panel: #111827;
+      --card: #1f2937;
+      --text: #e5e7eb;
+      --muted: #94a3b8;
+      --accent: #38bdf8;
+      --border: rgba(255,255,255,0.08);
+    }
 
-    <div class="project-hero">
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+      background: linear-gradient(180deg, #0f172a 0%, #111827 100%);
+      color: var(--text);
+      line-height: 1.6;
+    }
+
+    a {
+      color: var(--accent);
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    .container {
+      width: min(1000px, 92%);
+      margin: 0 auto;
+    }
+
+    nav {
+      position: sticky;
+      top: 0;
+      background: rgba(15, 23, 42, 0.92);
+      backdrop-filter: blur(8px);
+      border-bottom: 1px solid var(--border);
+      z-index: 10;
+    }
+
+    .nav-inner {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 16px 0;
+      gap: 16px;
+      flex-wrap: wrap;
+    }
+
+    .brand {
+      font-weight: 700;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 18px;
+      flex-wrap: wrap;
+    }
+
+    header {
+      padding: 56px 0 24px;
+    }
+
+    .hero-card,
+    .card {
+      background: rgba(31, 41, 55, 0.75);
+      border: 1px solid var(--border);
+      border-radius: 18px;
+      padding: 28px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.22);
+    }
+
+    h1, h2, h3 {
+      margin-top: 0;
+    }
+
+    h1 {
+      font-size: clamp(2rem, 4vw, 3rem);
+      line-height: 1.1;
+      margin-bottom: 12px;
+    }
+
+    .subtitle {
+      color: var(--muted);
+      max-width: 65ch;
+    }
+
+    .meta-row,
+    .tools-row {
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+      margin-top: 18px;
+    }
+
+    .pill {
+      background: rgba(56, 189, 248, 0.12);
+      color: #bae6fd;
+      border: 1px solid rgba(56, 189, 248, 0.28);
+      padding: 8px 12px;
+      border-radius: 999px;
+      font-size: 0.92rem;
+    }
+
+    section {
+      padding: 14px 0;
+    }
+
+    .section-title {
+      font-size: 1.7rem;
+      margin-bottom: 8px;
+    }
+
+    .section-intro {
+      color: var(--muted);
+      margin-bottom: 20px;
+    }
+
+    .grid-2 {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 22px;
+    }
+
+    ul {
+      margin-top: 0;
+      padding-left: 20px;
+    }
+
+    li {
+      margin-bottom: 8px;
+    }
+
+    figure {
+      margin: 0;
+    }
+
+    .screenshot-card {
+      background: rgba(31, 41, 55, 0.75);
+      border: 1px solid var(--border);
+      border-radius: 18px;
+      padding: 18px;
+      margin-bottom: 22px;
+    }
+
+    .screenshot-card img {
+      width: 100%;
+      height: auto;
+      display: block;
+      border-radius: 12px;
+      margin-top: 12px;
+      border: 1px solid var(--border);
+    }
+
+    figcaption {
+      margin-top: 12px;
+      color: var(--muted);
+      font-size: 0.95rem;
+    }
+
+    footer {
+      padding: 32px 0 56px;
+      text-align: center;
+      color: var(--muted);
+    }
+
+    @media (max-width: 860px) {
+      .grid-2 {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+<body>
+  <nav>
+    <div class="container nav-inner">
+      <div class="brand">Michael Dickens</div>
+      <div class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="index.html#projects">Projects</a>
+        <a href="index.html#resume">Resume</a>
+        <a href="index.html#contact">Contact</a>
+      </div>
+    </div>
+  </nav>
+
+  <header>
+    <div class="container">
+      <div class="hero-card">
+        <p style="color:#7dd3fc; font-weight:700; margin-bottom:8px;">Project Case Study</p>
         <h1>Premier League Match Prediction & Analytics Model</h1>
-
-        <p>
-            A data analytics project focused on designing a relational database and automated workflow 
-            to support predictive modeling using expected goals (xG) football performance data.
+        <p class="subtitle">
+          A data analytics project focused on designing a relational database and automated workflow to support predictive modeling using expected goals (xG) football performance data.
         </p>
 
-        <div class="tags">
-            <span>SQL</span>
-            <span>Database Design</span>
-            <span>SSIS</span>
-            <span>Sports Analytics</span>
-            <span>Predictive Modeling</span>
+        <div class="meta-row">
+          <span class="pill">SQL</span>
+          <span class="pill">Database Design</span>
+          <span class="pill">SSIS</span>
+          <span class="pill">Sports Analytics</span>
+          <span class="pill">Predictive Modeling</span>
         </div>
+      </div>
     </div>
+  </header>
 
-    <div class="card">
-        <h2>Problem</h2>
+  <main class="container">
+    <section>
+      <h2 class="section-title">Project Overview</h2>
+      <div class="card">
         <p>
-            Football match data is often stored across multiple sources and formats, making predictive 
-            analysis difficult without proper structure. The objective of this project was to design 
-            a normalized relational database and automation workflow that enables efficient querying, 
-            feature extraction, and preparation of datasets for predictive modeling.
+          This project involved designing a relational database and automated workflow to support predictive modeling for Premier League matches. The goal was to organize team, match, and expected goals (xG) data into a structured system that allows efficient querying, automation, and preparation for future model improvement.
         </p>
-    </div>
+      </div>
+    </section>
 
-    <div class="card">
-        <h2>Tools & Technologies</h2>
+    <section>
+      <h2 class="section-title">Problem</h2>
+      <div class="card">
+        <p>
+          Football match data is often split across multiple sources and formats, making predictive analysis difficult without proper structure. This project focused on solving that problem by building a normalized relational database and an SSIS workflow that supports efficient querying, feature extraction, and preparation of datasets for predictive modeling.
+        </p>
+      </div>
+    </section>
 
-        <div class="tags">
-            <span>SQL Server</span>
-            <span>SSIS</span>
-            <span>Python</span>
-            <span>Understat API</span>
-            <span>Football Data</span>
-            <span>Data Modeling</span>
+    <section>
+      <h2 class="section-title">Tools & Technologies</h2>
+      <div class="card">
+        <div class="tools-row">
+          <span class="pill">SQL Server</span>
+          <span class="pill">SSIS</span>
+          <span class="pill">Python</span>
+          <span class="pill">Understat API</span>
+          <span class="pill">Football Data</span>
+          <span class="pill">Data Modeling</span>
         </div>
-    </div>
+      </div>
+    </section>
 
-    <div class="card">
-        <h2>My Role & Contributions</h2>
-        <ul>
+    <section>
+      <h2 class="section-title">My Role & Contributions</h2>
+      <div class="grid-2">
+        <div class="card">
+          <ul>
             <li>Designed normalized database schema for teams, matches, and expected goals data.</li>
             <li>Imported and validated historical Premier League match datasets.</li>
             <li>Created SQL queries to support predictive feature generation.</li>
+          </ul>
+        </div>
+        <div class="card">
+          <ul>
             <li>Developed SSIS automation package to execute model workflow.</li>
             <li>Integrated relational database outputs into predictive modeling scripts.</li>
             <li>Tested model performance using completed matchday data.</li>
-        </ul>
-    </div>
+          </ul>
+        </div>
+      </div>
+    </section>
 
-    <div class="card">
-        <h2>Implementation</h2>
+    <section>
+      <h2 class="section-title">Implementation</h2>
+      <div class="card">
         <p>
-            Data was structured into relational tables linked through primary and foreign keys. 
-            An automated SSIS package was built to refresh prediction datasets and execute model 
-            processes with minimal manual intervention. This workflow supports scalable analytics 
-            and repeatable prediction cycles.
+          Data was structured into relational tables linked through primary and foreign key relationships. The design separated team information, match details, and xG data into related tables that support historical analysis and feature creation. An SSIS package was then built to automate parts of the workflow, reducing manual effort and supporting repeatable prediction cycles.
         </p>
-    </div>
+      </div>
+    </section>
 
-    <div class="card">
-        <h2>Results</h2>
+    <section>
+      <h2 class="section-title">Results</h2>
+      <div class="card">
         <ul>
-            <li>Built automated analytics pipeline for football match prediction.</li>
-            <li>Organized raw sports datasets into structured relational model.</li>
-            <li>Demonstrated ability to combine database engineering and predictive analytics.</li>
-            <li>Established foundation for future machine learning performance improvements.</li>
+          <li>Built an automated analytics workflow for football match prediction support.</li>
+          <li>Organized raw sports datasets into a structured relational model.</li>
+          <li>Demonstrated the ability to combine database engineering and predictive analytics.</li>
+          <li>Created a foundation for future machine learning performance improvements.</li>
         </ul>
-    </div>
+      </div>
+    </section>
 
-    <div class="card">
-        <h2>Project Screenshots</h2>
+    <section>
+      <h2 class="section-title">Project Screenshots</h2>
+      <p class="section-intro">
+        These screenshots show the database structure, SQL table outputs, and the SSIS automation workflow used in the project.
+      </p>
 
+      <figure class="screenshot-card">
         <h3>Entity Relationship Diagram</h3>
-        <img src="ERD.png" alt="Premier League ERD">
+        <img src="ERD.png" alt="Premier League ERD" />
+        <figcaption>
+          The ERD shows the normalized structure used to connect teams, matches, and expected goals data through key relationships.
+        </figcaption>
+      </figure>
 
-        <h3>SQL Tables</h3>
-        <img src="Sql Table 1.png" alt="Team Table">
-        <img src="Sql Table 2.png" alt="Match xG Table">
-        <img src="Sql Table 3.png" alt="Match Table">
+      <figure class="screenshot-card">
+        <h3>SQL Table – Team</h3>
+        <img src="Sql Table 1.png" alt="Premier League Team table query result" />
+        <figcaption>
+          The Team table stores Premier League clubs and provides the lookup structure for match relationships.
+        </figcaption>
+      </figure>
 
+      <figure class="screenshot-card">
+        <h3>SQL Table – Match_xG</h3>
+        <img src="Sql Table 2.png" alt="Premier League Match_xG table query result" />
+        <figcaption>
+          The Match_xG table stores expected goals values for home and away teams, supporting predictive feature generation.
+        </figcaption>
+      </figure>
+
+      <figure class="screenshot-card">
+        <h3>SQL Table – Match</h3>
+        <img src="Sql Table 3.png" alt="Premier League Match table query result" />
+        <figcaption>
+          The Match table stores matchday, date, team IDs, goals, and match status for historical analysis.
+        </figcaption>
+      </figure>
+
+      <figure class="screenshot-card">
         <h3>SSIS Automation Workflow</h3>
-        <img src="SSIS Working Screenshot.png" alt="SSIS Package">
-    </div>
+        <img src="SSIS Working Screenshot .png" alt="SSIS package for predictive model automation" />
+        <figcaption>
+          The SSIS package shows the automated execution step used to support the predictive model workflow.
+        </figcaption>
+      </figure>
+    </section>
+  </main>
 
-</section>
+  <footer>
+    <div class="container">
+      <p><a href="index.html">← Back to Home</a></p>
+      <p>© 2026 Michael Dickens</p>
+    </div>
+  </footer>
+</body>
+</html>
