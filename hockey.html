@@ -29,11 +29,14 @@ width:min(1000px,92%);
 margin:auto;
 }
 
-nav{
-background:rgba(15,23,42,0.95);
-padding:18px;
-border-bottom:1px solid var(--border);
-}
+nav {
+      position: sticky;
+      top: 0;
+      background: rgba(15, 23, 42, 0.92);
+      backdrop-filter: blur(8px);
+      border-bottom: 1px solid var(--border);
+      z-index: 10;
+    }
 
 .nav-inner {
       display: flex;
@@ -44,7 +47,15 @@ border-bottom:1px solid var(--border);
       flex-wrap: wrap;
     }
 
+.brand {
+      font-weight: 700;
+    }
 
+.nav-links {
+      display: flex;
+      gap: 18px;
+      flex-wrap: wrap;
+    }
     
 a{color:var(--accent);text-decoration:none;}
 
@@ -90,7 +101,7 @@ border:1px solid var(--border);
         <a href="index.html#contact">Contact</a>
       </div>
     </div>
-  </nav>
+</nav>
 
 <div class="container">
 
